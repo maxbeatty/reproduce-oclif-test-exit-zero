@@ -19,6 +19,7 @@ describe('hello', () => {
   test
     .stdout()
     .command(['hello', 'friend', '--from=zero'])
+    .exit(0)
     .it('should stop after this.exit', (ctx) => {
       expect(ctx.stdout).to.not.contain('should have exited with zero')
     })

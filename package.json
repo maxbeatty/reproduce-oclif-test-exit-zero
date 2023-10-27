@@ -4,7 +4,7 @@
     "reproduce-oclif-test-exit-zero": "./bin/run.js"
   },
   "dependencies": {
-    "@oclif/core": "^3",
+    "@oclif/core": "^2.15.0",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^3.9.3",
     "eslint-config-prettier": "^9.0.0"
