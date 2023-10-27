@@ -20,6 +20,22 @@ hello friend from oclif! (./src/commands/hello/index.ts)
   async run(): Promise<void> {
     const {args, flags} = await this.parse(Hello)
 
-    this.log(`hello ${args.person} from ${flags.from}! (./src/commands/hello/index.ts)`)
+    switch (flags.from) {
+      case 'zero': {
+        this.exit(0)
+        this.log('should have exited with zero')
+        break
+      }
+
+      case 'one': {
+        this.exit(1)
+        this.log('should have exited with one')
+        break
+      }
+
+      default: {
+        this.log(`hello ${args.person} from ${flags.from}! (./src/commands/hello/index.ts)`)
+      }
+    }
   }
 }
